@@ -10,6 +10,7 @@ STARTTIME=`date +"%D %T"`
 sleep 200
 ENDTIME=`date +"%D %T"`
 
+echo "In: Job 2"
 echo "Start Time: $STARTTIME"
 echo "Start Time: $STARTTIME" > job2.log
 export >> job2.log
