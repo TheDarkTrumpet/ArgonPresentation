@@ -6,13 +6,10 @@
 #$ -j y
 #$ -cwd
 
-STARTTIME=`date +"%D %T"`
-sleep 500
-ENDTIME=`date +"%D %T"`
+
+sleep 30
 
 echo "In: Job 3"
-echo "Start Time: $STARTTIME"
-echo "Start Time: $STARTTIME" > job3.log
-export >> job3.log
-echo "End Time: $ENDTIME"
-echo "End Time: $ENDTIME" >> job3.log
+MACHINEID=`uname -a | md5sum | cut -f 1 -d' '`
+echo "JOB3,$MACHINEID" > job3.data
+
