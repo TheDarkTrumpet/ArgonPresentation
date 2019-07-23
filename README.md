@@ -31,3 +31,11 @@ Your job 7403539 ("BasicSubmission-job1") has been submitted
 [dthole@argon-login-1 BasicSubmission]$ qstat | grep -i 'dthole'
 7403539 0.50229 BasicSubmi dthole       r     07/23/2019 12:46:19 all.q@argon-lc-d7-12.hpc           1    
 ```
+
+
+# Other Information/Commands
+
+Basic Commands:
+- qsub => Submits the job itself
+- qacct -j <JOBID> => Outputs historical information about the job (runtime/etc)
+
