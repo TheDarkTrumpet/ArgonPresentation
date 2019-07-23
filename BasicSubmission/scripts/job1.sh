@@ -3,6 +3,8 @@
 #$ -N BasicSubmission-job1
 #$ -r y
 #$ -pe smp 1
+#$ -r y
+#$ -j y
 
 STARTTIME=`date +"%D %T`
 sleep 300
