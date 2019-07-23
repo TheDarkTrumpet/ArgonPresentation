@@ -1,0 +1,3 @@
+[submodule "bin/clinfo"]
+	path = bin/clinfo
+	url = https://github.com/Oblomov/clinfo.git
