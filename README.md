@@ -66,7 +66,8 @@ This script is fairly simple.  It requests a GPU node, runs clinfo, outputs to a
 ## Example qstat output
 
 ```
-
+[dthole@argon-login-1 GPUQueue]$ qstat | grep -i 'dthole'
+7408099 0.00000 GPUQueue-j dthole       qw    07/23/2019 16:42:35                                    1
 ```
 
 # Other Information/Commands
