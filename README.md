@@ -53,7 +53,11 @@ These scripts are similar to the above, with the addition of 4th script. The 4th
 ## Example qstat output
 
 ```
-
+[dthole@argon-login-1 LinearProcessingAdvanced]$ qstat | grep -i 'dthole'
+7405716 0.00000 LinearProc dthole       qw    07/23/2019 15:54:16                                    1        
+7405717 0.00000 LinearProc dthole       qw    07/23/2019 15:54:17                                    1        
+7405718 0.00000 LinearProc dthole       hqw   07/23/2019 15:54:17                                    1        
+7405719 0.00000 LinearProc dthole       hqw   07/23/2019 15:54:17                                    1 
 ```
 
 # GPUQueue

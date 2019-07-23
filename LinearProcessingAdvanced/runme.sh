@@ -17,6 +17,6 @@ echo "==> JOB3: $JOB3"
 
 QUEUETIME=`date +"%D %T"`
 echo "Starting Queue (Summary): $QUEUETIME"
-$(qsub -hold_jid $JOB3 scripts/summary.sh)
+qsub -hold_jid $JOB3 scripts/summary.sh
 
 echo "Finished queue"
