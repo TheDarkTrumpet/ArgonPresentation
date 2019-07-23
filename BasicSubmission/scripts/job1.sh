@@ -1,6 +1,6 @@
 #!/bin/sh
 #$ -q all.q
-#$ -n BasicSubmission-job1
+#$ -N BasicSubmission-job1
 #$ -r y
 #$ -pe smp 1
 
