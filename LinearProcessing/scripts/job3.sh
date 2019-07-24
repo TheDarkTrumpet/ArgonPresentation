@@ -1,7 +1,6 @@
 #!/bin/sh
 #$ -q all.q
 #$ -N LinearProcessing-job3
-#$ -r y
 #$ -pe smp 1
 #$ -j y
 #$ -cwd

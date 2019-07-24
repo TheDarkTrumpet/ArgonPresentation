@@ -1,7 +1,6 @@
 #!/bin/sh
 #$ -q all.q
 #$ -N BasicSubmission-job1
-#$ -r y
 #$ -pe smp 1
 #$ -j y
 #$ -cwd
