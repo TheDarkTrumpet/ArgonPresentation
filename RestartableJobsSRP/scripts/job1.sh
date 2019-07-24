@@ -12,7 +12,7 @@ if [ ! -d "$TEMPLOCATION" ]; then
     mkdir $TEMPLOCATION
 fi
 
-if [ $RESTARTED = 1]; then
+if [ $RESTARTED = 1 ]; then
     cat "Restarted..." >> $TEMPLOCATION/job1.txt
 fi
 
