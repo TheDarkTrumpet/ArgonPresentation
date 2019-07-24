@@ -18,4 +18,4 @@ fi
 
 sleep 3600
 
-cat `uname -a` >> $TEMPLOCATION/job1.txt
+echo `uname -a` >> $TEMPLOCATION/job1.txt

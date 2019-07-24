@@ -6,16 +6,28 @@
 #$ -cwd
 #$ -ckpt user
 
-source settings.cfg
-
-if [ ! -d "$TEMPLOCATION" ]; then
-    mkdir $TEMPLOCATION
-fi
-
+RUNTIME=`date +"%D %T"`
 if [ $RESTARTED = 1]; then
-    cat "Restarted..." >> $TEMPLOCATION/job1.txt
+    cat "Restarted... at $RUNTIME" >> job1.txt
+    # Other setup code here.
 fi
 
-sleep 3600
+if [ ! -f "operation1.txt"]; then
+    sleep 3600
+    RUNTIME=`date +"%D %T"`
+    echo "Operation 1 complete at $RUNTIME" > operation1.txt
+fi
 
-cat `uname -a` >> $TEMPLOCATION/job1.txt
+if [ ! -f "operation2.txt"]; then
+    sleep 14400
+    RUNTIME=`date +"%D %T"`
+    echo "Operation 2 complete at $RUNTIME" > operation2.txt
+fi
+
+if [ ! -f "operation3.txt"]; then
+    sleep 3600
+    RUNTIME=`date +"%D %T"`
+    echo "Operation 3 complete at $RUNTIME" > operation3.txt
+fi
+
+
