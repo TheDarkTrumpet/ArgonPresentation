@@ -69,6 +69,15 @@ This script is fairly simple.  It requests a GPU node, runs clinfo, outputs to a
 [dthole@argon-login-1 GPUQueue]$ qstat | grep -i 'dthole'
 7408099 0.00000 GPUQueue-j dthole       qw    07/23/2019 16:42:35                                    1
 ```
+# RestartableJobsSRP
+This script is a simple demonstration of how to make jobs restarable, and have checkpoints in the main script.  Jobs that are restarted are responsible for understanding their point if there are multiple steps.  So, ideally, each unit would be designed with SRP (Single Responsibility Principle), where there's less logic required when dealing with the state of a restartable.  If at all possible, this is the avenue I recommend.
+
+## Example qstat output
+
+# RestartableJobsCheckpoint
+This script is a simple demonstration of a job with many checkpoints involved and temporary files denoting the state.  It uses '/nfsscratch' as the primary shared source between restarted jobs (vs '/localscratch').  Ideally, you shouldn't process data in your home directory, and instead do it on a scratch then copy the files you need at the end.
+
+## Example qstat output
 
 # Other Information/Commands
 
