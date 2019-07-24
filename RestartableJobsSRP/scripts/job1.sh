@@ -4,13 +4,18 @@
 #$ -pe smp 30
 #$ -j y
 #$ -cwd
+#$ -ckpt user
 
 source settings.cfg
-
-sleep 3600
 
 if [ ! -d "$TEMPLOCATION" ]; then
     mkdir $TEMPLOCATION
 fi
 
-cat `uname -a` > $TEMPLOCATION/job1.txt
+if [ $RESTARTED = 1]; then
+    cat "Restarted..." >> $TEMPLOCATION/job1.txt
+fi
+
+sleep 3600
+
+cat `uname -a` >> $TEMPLOCATION/job1.txt

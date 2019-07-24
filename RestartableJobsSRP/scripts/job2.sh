@@ -1,7 +1,7 @@
 #!/bin/sh
 #$ -q all.q
 #$ -N RestartableJobsSRP-job2
-#$ -pe smp 30
+#$ -pe smp 1
 #$ -j y
 #$ -cwd
 
