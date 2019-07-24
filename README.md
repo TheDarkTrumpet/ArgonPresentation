@@ -74,6 +74,12 @@ This script is a simple demonstration of how to make jobs restarable, and have c
 
 ## Example qstat output
 
+```
+[dthole@argon-login-1 RestartableJobsSRP]$ qstat | grep -i 'dthole'
+7491060 0.00000 Restartabl dthole       qw    07/24/2019 10:56:23                                   30        
+7491061 0.00000 Restartabl dthole       hqw   07/24/2019 10:56:23                                    1
+```
+
 # RestartableJobsCheckpoint
 This script is a simple demonstration of a job with many checkpoints involved and temporary files denoting the state.  It uses '/nfsscratch' as the primary shared source between restarted jobs (vs '/localscratch').  Ideally, you shouldn't process data in your home directory, and instead do it on a scratch then copy the files you need at the end.
 
