@@ -8,3 +8,4 @@
 source settings.cfg
 
 cp $TEMPLOCATION/job1.txt .
+rm -Rf $TEMPLOCATION
